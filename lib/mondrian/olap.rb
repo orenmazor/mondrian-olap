@@ -11,6 +11,7 @@ unless java.lang.System.getProperty("log4j.configuration")
 end
 # register Mondrian olap4j driver
 Java::mondrian.olap4j.MondrianOlap4jDriver
+Java::mondrian.rolap.RolapUtil
 
 %w(error connection query result schema schema_udf cube).each do |file|
   require "mondrian/olap/#{file}"
